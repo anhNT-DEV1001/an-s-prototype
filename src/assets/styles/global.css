@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Khai báo phông chữ tùy chỉnh của bạn --- */
+/* Đặt tên chung cho nhóm phông chữ, ví dụ: 'MyThemeFont' */
+
+@font-face {
+  font-family: 'DrukWide'; /* Đặt tên cho phông chữ của bạn */
+  src: url('../fonts/DrukWideBold.ttf') format('opentype');
+  font-weight: 400; /* 400 là 'normal' hoặc 'regular' */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Redaction';
+  src: url('../fonts/Redaction-Italic.otf') format('truetype');
+  font-weight: 400; /* 700 là 'bold' */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Redaction';
+  src: url('../fonts/Redaction-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
