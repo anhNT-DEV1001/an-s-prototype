@@ -1,6 +1,6 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useSwipeable } from 'react-swipeable';
+import React, { useState, useCallback, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useSwipeable } from "react-swipeable";
 
 interface ImageSliderProps {
   images: string[];
@@ -11,31 +11,36 @@ interface ImageSliderProps {
 }
 
 const variants = {
-  enter: (direction: number) => ({ x: direction > 0 ? '100%' : '-100%', opacity: 1 }),
-  center: { x: '0%', opacity: 1 },
-  exit: (direction: number) => ({ x: direction > 0 ? '-100%' : '100%', opacity: 1 }),
+  enter: (direction: number) => ({
+    x: direction > 0 ? "100%" : "-100%",
+    opacity: 1,
+  }),
+  center: { x: "0%", opacity: 1 },
+  exit: (direction: number) => ({
+    x: direction > 0 ? "-100%" : "100%",
+    opacity: 1,
+  }),
 };
 
 const ImageSlider: React.FC<ImageSliderProps> = ({
   images,
-  alt = 'slide',
+  alt = "slide",
   durationMs = 500,
   clickToNext = true,
   onSlideChange,
 }) => {
   const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
 
-  // Thông báo initial cho cha
+  // Báo index initial lên cha
   useEffect(() => {
     onSlideChange?.(index);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // gọi 1 lần khi mount
+  }, []);
 
   const paginate = useCallback(
     (newDirection: number) => {
       setIndex(([curr]) => {
         const next = (curr + newDirection + images.length) % images.length;
-        // cập nhật và báo cho cha
         onSlideChange?.(next);
         return [next, newDirection];
       });
@@ -50,8 +55,16 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
     trackMouse: true,
   });
 
-  const handleClick = () => {
-    if (clickToNext) paginate(1);
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!clickToNext) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const half = rect.width / 2;
+    if (clickX > half) {
+      paginate(1); // click phải → kế tiếp
+    } else {
+      paginate(-1); // click trái → lùi lại
+    }
   };
 
   if (!images || images.length === 0) return null;
@@ -59,7 +72,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   return (
     <div
       {...handlers}
-      className="relative w-full h-full overflow-hidden cursor-pointer touch-pan-y"
+      className="relative w-full h-full overflow-hidden cursor-pointer touch-pan-y select-none"
       onClick={handleClick}
       role="region"
       aria-roledescription="carousel"
@@ -74,11 +87,11 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
           animate="center"
           exit="exit"
           transition={{
-            x: { type: 'tween', duration: durationMs / 1000 },
+            x: { type: "tween", duration: durationMs / 1000 },
             opacity: { duration: 0.15 },
           }}
           className="absolute inset-0 flex items-center justify-center"
-          style={{ willChange: 'transform, opacity' }}
+          style={{ willChange: "transform, opacity" }}
         >
           <img
             src={images[index]}

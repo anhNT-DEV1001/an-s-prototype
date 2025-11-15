@@ -1,3 +1,4 @@
+import Profile from "./components/Profile";
 import Header from "./components/Header"
 import Section01 from "./components/Section/Section01"
 import Section02 from "./components/Section/Section02"
@@ -11,7 +12,10 @@ function App() {
       {/* Body */}
       <Section01/>
       <Section02/>
-      <Section03/>
+      {/* <Section03/> */}
+
+      {/* Profile */}
+      <Profile/>
     </div>
   )
 }
