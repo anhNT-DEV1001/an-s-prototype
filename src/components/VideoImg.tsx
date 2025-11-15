@@ -99,7 +99,7 @@ const VideoImg: React.FC<VideoImgProps> = ({
             <img
               src={current.src}
               alt={`${alt} - ${index + 1}`}
-              className="max-w-full max-h-full object-contain select-none pointer-events-none"
+              className="w-full h-full object-cover select-none pointer-events-none"
               draggable={false}
             />
           )}

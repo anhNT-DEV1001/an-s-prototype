@@ -1,16 +1,34 @@
 import profile from '../../assets/imgs/profile/kantran.svg';
+import lt1 from '../../assets/imgs/section03/LENTI/LT_1.png';
+import lt2 from '../../assets/imgs/section03/LENTI/LT_2.png';
+import lt3 from '../../assets/imgs/section03/LENTI/LT_3.png';
+import lt4 from '../../assets/imgs/section03/LENTI/LT_4.png';
+import lt5 from '../../assets/imgs/section03/LENTI/LT_5.png';
+import { useState } from 'react';
+import VideoImg from '../VideoImg';
+
+
 export default function Section03() {
+  const arrLt = [
+    {type: 'image' , src: lt1},
+    {type: 'image' , src: lt2},
+    {type: 'image' , src: lt3},
+    {type: 'image' , src: lt4},
+    {type: 'image' , src: lt5},
+  ] as any;
+  const [currentSlideLT, setCurrentSlideLT] = useState(0);
   return(
   <>
   <div className="grid grid-cols-2 grid-rows-1 gap-0 mt-10">
     <section className="m-2">
       <div className="bg-black h-[942.73px] flex justify-center items-center" >
-        <img src="" alt="Test1" />
+        {/* <img src="" alt="Test1" /> */}
+        <VideoImg media={arrLt}/>
       </div>
       <div className=" pb-5 flex justify-between">
           <div className='font-display'>Lenti Type system </div>
             <div className='text-right font-display text-[9px]'>
-            1 / 3
+            {currentSlideLT + 1}/{arrLt.length}
             </div>
         </div> 
       <div className="grid grid-cols-2 grid-rows-1">

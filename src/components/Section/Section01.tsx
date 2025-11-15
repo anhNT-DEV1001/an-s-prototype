@@ -53,7 +53,7 @@ export default function Section01() {
         <div className=" pb-5 flex justify-between">
           <div className='font-display'>Space, Boundary and Connection</div>
             <div className='text-right font-display text-[9px]'>
-            {currentImage + 1} / {arrImg.length}
+            {currentImage + 1}/{arrImg.length}
             </div>
         </div> 
         
@@ -82,15 +82,25 @@ export default function Section01() {
         <div className=" pb-5 flex justify-between">
           <div className='font-display'>Greenwich Student Book Exhibition</div>
             <div className='text-right font-display text-[9px]'>
-            {currentSlide + 1} / {arrMedia.length}
+            {currentSlide + 1}/{arrMedia.length}
             </div>
         </div> 
         <div className="grid grid-cols-2 grid-rows-1 gap-0">
           <p className="mr-2 text-[14.4px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatem commodi alias ad in, debitis labore voluptatibus pariatur. Ab quod alias nulla aspernatur maiores qui eaque, ipsam perspiciatis consequatur minima!
+            Visual identity for the Greenwich Student Book Exhibition under the theme “O.” Each letter O is sourced directly from a featured book, reflecting its unique scale, typeface, and typographic character.
+            <div className="pt-2 text-[10.8px]">
+              <p>2025</p>
+              <p>Visual Identity, various media</p>
+              <p>Typeface: Maxi & Diatype by Dinamo</p>
+            </div>
           </p>
           <p className="text-[14.4px]">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque dolorem ratione ipsum perferendis. Fugit accusamus sint, corrupti porro quo possimus aliquam distinctio assumenda natus totam minus, sapiente ut veniam quia.
+            Within this framework, we created a cohesive set of print and digital materials. These included large-format posters for public display, banners, catalogue, and animations. Animation by Dao Quang Minh, Vu Duy Anh
+            <div className="pt-2 text-[10.8px]">
+              <p>Poster: 1000x1982mm</p>
+              <p>Banner: 1650x700mm, 2200x700mm, </p>
+              <p>Catalogue: 215x306x10mm, 94 pages</p>
+            </div>
           </p>
         </div>
       </section>
