@@ -20,12 +20,13 @@ const variants = {
     x: direction > 0 ? "-100%" : "100%",
     opacity: 1,
   }),
+  
 };
 
 const ImageSlider: React.FC<ImageSliderProps> = ({
   images,
   alt = "slide",
-  durationMs = 500,
+  durationMs = 400,
   clickToNext = true,
   onSlideChange,
 }) => {
