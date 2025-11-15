@@ -23,7 +23,7 @@ export default function Section03() {
     <section className="m-2">
       <div className="bg-black h-[942.73px] flex justify-center items-center" >
         {/* <img src="" alt="Test1" /> */}
-        <VideoImg media={arrLt}/>
+        <VideoImg media={arrLt} clickToNext={true} onSlideChange={(index) => setCurrentSlideLT(index)} />
       </div>
       <div className=" pb-5 flex justify-between">
           <div className='font-display'>Lenti Type system </div>
