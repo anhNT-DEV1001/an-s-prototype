@@ -8,7 +8,7 @@ interface MediaItem {
 }
 
 interface VideoImgProps {
-  media: MediaItem[];                 // 🔥 đổi tên từ images → media
+  media: MediaItem[];
   alt?: string;
   durationMs?: number;
   clickToNext?: boolean;
@@ -35,6 +35,21 @@ const VideoImg: React.FC<VideoImgProps> = ({
   onSlideChange,
 }) => {
   const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
+  const [isPortrait, setIsPortrait] = useState<boolean | null>(null);
+
+  // Load orientation mỗi khi slide đổi
+  useEffect(() => {
+    if (media[index].type !== "image") {
+      setIsPortrait(null);
+      return;
+    }
+
+    const img = new Image();
+    img.src = media[index].src;
+    img.onload = () => {
+      setIsPortrait(img.naturalHeight > img.naturalWidth);
+    };
+  }, [index, media]);
 
   useEffect(() => {
     onSlideChange?.(index);
@@ -70,6 +85,14 @@ const VideoImg: React.FC<VideoImgProps> = ({
 
   const current = media[index];
 
+  // 🧠 Auto fit mode
+  const imageFitClass =
+  isPortrait === null
+    ? "object-contain"
+    : isPortrait
+    ? "object-cover"   // ảnh dọc
+    : "object-cover"; 
+
   return (
     <div
       {...handlers}
@@ -94,17 +117,17 @@ const VideoImg: React.FC<VideoImgProps> = ({
           className="absolute inset-0 flex items-center justify-center"
           style={{ willChange: "transform, opacity" }}
         >
-          {/* 🔥 Ảnh */}
+          {/* Ảnh */}
           {current.type === "image" && (
             <img
               src={current.src}
               alt={`${alt} - ${index + 1}`}
-              className="w-full h-full object-contain bg-black select-none pointer-events-none"
+              className={`w-full h-full ${imageFitClass} bg-black select-none pointer-events-none`}
               draggable={false}
             />
           )}
 
-          {/* 🔥 Video */}
+          {/* Video */}
           {current.type === "video" && (
             <video
               src={current.src}
@@ -112,7 +135,7 @@ const VideoImg: React.FC<VideoImgProps> = ({
               muted
               loop
               playsInline
-              className="max-w-full max-h-full object-contain"
+              className="w-full h-full object-contain bg-black"
             />
           )}
         </motion.div>
