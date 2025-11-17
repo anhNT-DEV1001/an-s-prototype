@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import imgBox1 from '../../assets/imgs/section01/box1_01.png';
-import imgBox2 from '../../assets/imgs/section01/box1_02.png';
-import imgBox3 from '../../assets/imgs/section01/box1_03.png';
 import img2 from '../../assets/imgs/section01/GREENWICH BOOK EXHIBITION/GSBE_2.png';
 import img3 from '../../assets/imgs/section01/GREENWICH BOOK EXHIBITION/GSBE_3.png';
 import img4 from '../../assets/imgs/section01/GREENWICH BOOK EXHIBITION/GSBE_4.png';
@@ -18,11 +15,37 @@ import img14 from '../../assets/imgs/section01/GREENWICH BOOK EXHIBITION/GSBE_14
 import img15 from '../../assets/imgs/section01/GREENWICH BOOK EXHIBITION/GSBE_15.png';
 import img16 from '../../assets/imgs/section01/GREENWICH BOOK EXHIBITION/GSBE_16.png';
 import vid from '../../assets/imgs/section01/GREENWICH BOOK EXHIBITION/GSBE_1.mp4';
-import ImageSlider from './ImgSlider';
+
+import c1 from '../../assets/imgs/section01/SPACE BOUNDARY/1.png';
+import c2 from '../../assets/imgs/section01/SPACE BOUNDARY/2.png';
+import c3 from '../../assets/imgs/section01/SPACE BOUNDARY/3.png';
+import c4 from '../../assets/imgs/section01/SPACE BOUNDARY/4.png';
+import c5 from '../../assets/imgs/section01/SPACE BOUNDARY/5.gif';
+import c6 from '../../assets/imgs/section01/SPACE BOUNDARY/6.png';
+import c7 from '../../assets/imgs/section01/SPACE BOUNDARY/7.png';
+import c8 from '../../assets/imgs/section01/SPACE BOUNDARY/8.png';
+import c9 from '../../assets/imgs/section01/SPACE BOUNDARY/9.png';
+import c10 from '../../assets/imgs/section01/SPACE BOUNDARY/10.png';
+import c11 from '../../assets/imgs/section01/SPACE BOUNDARY/11.png';
+import c12 from '../../assets/imgs/section01/SPACE BOUNDARY/12.png';
+import c13 from '../../assets/imgs/section01/SPACE BOUNDARY/13.png';
+import c14 from '../../assets/imgs/section01/SPACE BOUNDARY/14.png';
+import c15 from '../../assets/imgs/section01/SPACE BOUNDARY/15.png';
+import c16 from '../../assets/imgs/section01/SPACE BOUNDARY/16.png';
+import c17 from '../../assets/imgs/section01/SPACE BOUNDARY/17.png';
+import c18 from '../../assets/imgs/section01/SPACE BOUNDARY/18.png';
+import c19 from '../../assets/imgs/section01/SPACE BOUNDARY/19.png';
+import c20 from '../../assets/imgs/section01/SPACE BOUNDARY/20.png';
+import c21 from '../../assets/imgs/section01/SPACE BOUNDARY/21.png';
+import c22 from '../../assets/imgs/section01/SPACE BOUNDARY/22.png';
+import c23 from '../../assets/imgs/section01/SPACE BOUNDARY/23.png';
+import c24 from '../../assets/imgs/section01/SPACE BOUNDARY/24.png';
+
+
+
+
 import VideoImg from '../VideoImg';
 export default function Section01() {
-  const arrImg = [imgBox1 , imgBox2 , imgBox3];
-  const [currentImage, setCurrentImage] = useState(0);
   const arrMedia = [
     {type: "video" , src: vid },
     {type: "image" , src: img2 },
@@ -41,19 +64,46 @@ export default function Section01() {
     {type: "image" , src: img15 },
     {type: "image" , src: img16 },
   ] as any;
+
+  const arrC = [
+    {type: 'image' , src: c1},
+    {type: 'image' , src: c2},
+    {type: 'image' , src: c3},
+    {type: 'image' , src: c4},
+    {type: 'image' , src: c5},
+    {type: 'image' , src: c6},
+    {type: 'image' , src: c7},
+    {type: 'image' , src: c8},
+    {type: 'image' , src: c9},
+    {type: 'image' , src: c10},
+    {type: 'image' , src: c11},
+    {type: 'image' , src: c12},
+    {type: 'image' , src: c13},
+    {type: 'image' , src: c14},
+    {type: 'image' , src: c15},
+    {type: 'image' , src: c16},
+    {type: 'image' , src: c17},
+    {type: 'image' , src: c18},
+    {type: 'image' , src: c19},
+    {type: 'image' , src: c20},
+    {type: 'image' , src: c21},
+    {type: 'image' , src: c22},
+    {type: 'image' , src: c23},
+    {type: 'image' , src: c24},
+  ] as any;
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlideC, setCurrentSlideC] = useState(0);
   return (
     <div className="grid grid-cols-2 grid-rows-1 gap-0">
       {/* box1 */}
       <section className="bg-primary m-2">
         <div className="bg-black flex justify-center items-center" style={{height : 721.01 }}>
-          {/* <img src={imgBox3} alt="Test1" /> */}
-          <ImageSlider images={arrImg} alt='Box1' clickToNext={true} onSlideChange={(index) => setCurrentImage(index)} />
+          <VideoImg media={arrC} clickToNext={true} onSlideChange={(index) => setCurrentSlideC(index)}/>
         </div>
         <div className=" pb-5 flex justify-between">
           <div className='font-display'>Space, Boundary and Connection</div>
             <div className='text-right font-display text-[9px]'>
-            {currentImage + 1}/{arrImg.length}
+            {currentSlideC + 1}/{arrC.length}
             </div>
         </div> 
         

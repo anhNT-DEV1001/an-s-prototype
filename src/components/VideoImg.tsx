@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
 interface MediaItem {
-  type: "image" | "video";
+  type: "image" | "video" | "gif";
   src: string;
 }
 
@@ -122,10 +122,20 @@ const VideoImg: React.FC<VideoImgProps> = ({
             <img
               src={current.src}
               alt={`${alt} - ${index + 1}`}
-              className={`w-full h-full ${imageFitClass} bg-black select-none pointer-events-none`}
+              className={`w-full h-full ${imageFitClass} bg-primary select-none pointer-events-none`}
               draggable={false}
             />
           )}
+
+          {/* {current.type === "gif" && (
+            // <img
+            //   src={current.src}
+            //   alt={`${alt} - ${index + 1}`}
+            //   className={`w-full h-full ${imageFitClass} bg-primary select-none pointer-events-none`}
+            //   draggable={false}
+            // />
+            
+          )} */}
 
           {/* Video */}
           {current.type === "video" && (

@@ -86,7 +86,15 @@ export default function Section02() {
           </div>
         </div> 
         <div className="text-[14.4px]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam tempore eligendi, magni ad molestiae quaerat ipsam officia laudantium asperiores illum aperiam! Consequatur molestias ex incidunt labore fugit deleniti vel ea?
+          Ending credit sequence for Giu Anh Cho Ngay Hom Qua, a music video from Xoay Tron, the second studio album by Hoang Dung.
+        </div>
+        <div className="pt-2 text-[10.8px]">
+              <p>2025</p>
+              <p>Creative & Art Direction: Duy Dao & Studio DUY</p>
+              <p>Project Managers: Quan Le, Anh Nguyen</p>
+              <p>Design Lead: Duy Dao, June Vu</p>
+              <p>Designers & Assistant: Dong Truc, Ha Hoang, An Tran, Minh Dang, Quang Khai</p>
+              <p>Typeface: YTF Grand BD by Yellow Type Foundry</p>
         </div>
       </section>
       <section className="m-2">
@@ -100,7 +108,10 @@ export default function Section02() {
           </div>
         </div> 
         <div className="text-[14.4px]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam tempore eligendi, magni ad molestiae quaerat ipsam officia laudantium asperiores illum aperiam! Consequatur molestias ex incidunt labore fugit deleniti vel ea?
+          Visual concept and poster for International Typography Poster Exhibition 2021, the event held annually celebrating innovative typographic expression from designers around the world.
+        </div>
+        <div className="pt-2 text-[10.8px]">
+              <p>Poster: 841x1189mm, 210x297mm</p>
         </div>
       </section>
       <section className="mb-2 mr-2 mt-2">
@@ -115,7 +126,13 @@ export default function Section02() {
           </div>
         </div> 
         <div className="text-[14.4px]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam tempore eligendi, magni ad molestiae quaerat ipsam officia laudantium asperiores illum aperiam! Consequatur molestias ex incidunt labore fugit deleniti vel ea?
+          A publication that examines the chaotic patterns within AI-generated data, using a visual language inspired by CAPTCHA, the online verification system created to differentiate humans from machines.
+        </div>
+        <div className="pt-2 text-[10.8px]">
+              <p>2024</p>
+              <p>Typeface: Redaction, Space Mono, Inter</p>
+              <p>Dimension:</p>
+              <p>Number of Pages:</p>
         </div>
       </section> 
     </div>

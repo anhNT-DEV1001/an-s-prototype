@@ -1,10 +1,10 @@
 import profile from '../assets/imgs/profile/kantran.svg';
 export default function Profile() {
   return (
-    <div className="flex flex-col w-full min-h-screen mt-10" id="profile">
-
+    // THAY ĐỔI NẰM Ở ĐÂY
+    <div className="flex flex-col w-full h-[calc(99vh-4rem)] overflow-hidden mt-10" id="profile">
       {/* Phần 1: Info */}
-      <div className="grid grid-cols-2 gap-0 flex-none mt-10">
+      <div className="grid grid-cols-2 gap-0 flex-none">
         <div></div>
         <div>
           <p><em>About:</em></p>
