@@ -75,7 +75,7 @@ export default function Section02() {
   return (
     <div className="mt-10 grid grid-cols-3 grid-rows-1 gap-0">
       <section className="mb-2 ml-2 mt-2">
-        <div className="flex justify-center items-center bg-black h-[438.69px]">
+        <div className="flex justify-center items-center bg-black">
           <VideoImg media={arrMedia} alt='Box2' clickToNext={true} onSlideChange={(index) => setCurrentSlide(index)}/>
         </div>
         {/* text */}
@@ -98,7 +98,7 @@ export default function Section02() {
         </div>
       </section>
       <section className="m-2">
-        <div className="flex justify-center items-center bg-primary h-[943.35px]">
+        <div className="flex justify-center items-center bg-primary">
           <VideoImg media={arrImg} clickToNext={true} onSlideChange={(index) => setCurrentSlideImg(index)} />
         </div>
         <div className=" pb-5 flex justify-between">
@@ -115,7 +115,7 @@ export default function Section02() {
         </div>
       </section>
       <section className="mb-2 mr-2 mt-2">
-        <div className="flex justify-center items-center bg-primary h-[494.18px]">
+        <div className="flex justify-center items-center bg-primary">
           {/* <img src={imgBox3} alt="" /> */}
           <VideoImg media={arrImgRC} clickToNext={true} onSlideChange={(index) => setCurrentSlideImgRC(index)} />
         </div>

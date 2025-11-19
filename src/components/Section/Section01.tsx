@@ -45,6 +45,7 @@ import c24 from '../../assets/imgs/section01/SPACE BOUNDARY/24.png';
 
 
 import VideoImg from '../VideoImg';
+
 export default function Section01() {
   const arrMedia = [
     {type: "video" , src: vid },
@@ -97,7 +98,7 @@ export default function Section01() {
     <div className="grid grid-cols-2 grid-rows-1 gap-0">
       {/* box1 */}
       <section className="bg-primary m-2">
-        <div className="bg-black flex justify-center items-center" style={{height : 721.01 }}>
+        <div className="bg-black flex justify-center items-center">
           <VideoImg media={arrC} clickToNext={true} onSlideChange={(index) => setCurrentSlideC(index)}/>
         </div>
         <div className=" pb-5 flex justify-between">
@@ -126,7 +127,7 @@ export default function Section01() {
       </section>
       {/* box2 */}
       <section className="bg-primary ml-0 mb-2 mt-2 mr-2">
-        <div className="bg-black flex justify-center items-center" style={{height : 638.2}}>
+        <div className="bg-black flex justify-center items-center">
           <VideoImg media={arrMedia} alt='Box2' clickToNext={true} onSlideChange={(index) => setCurrentSlide(index)}/>
         </div>
         <div className=" pb-5 flex justify-between">

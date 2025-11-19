@@ -35,19 +35,25 @@ const VideoImg: React.FC<VideoImgProps> = ({
   onSlideChange,
 }) => {
   const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
-  const [isPortrait, setIsPortrait] = useState<boolean | null>(null);
+  const [aspectRatio, setAspectRatio] = useState<number | null>(null);
 
-  // Load orientation mỗi khi slide đổi
+  // Load ảnh và detect aspect ratio để tránh black bar
   useEffect(() => {
-    if (media[index].type !== "image") {
-      setIsPortrait(null);
+    const current = media[index];
+    
+    if (current.type === "video") {
+      setAspectRatio(null);
       return;
     }
 
     const img = new Image();
-    img.src = media[index].src;
+    img.src = current.src;
     img.onload = () => {
-      setIsPortrait(img.naturalHeight > img.naturalWidth);
+      const ratio = img.naturalWidth / img.naturalHeight;
+      setAspectRatio(ratio);
+    };
+    img.onerror = () => {
+      setAspectRatio(null);
     };
   }, [index, media]);
 
@@ -85,22 +91,19 @@ const VideoImg: React.FC<VideoImgProps> = ({
 
   const current = media[index];
 
-  // 🧠 Auto fit mode
-  const imageFitClass =
-  isPortrait === null
-    ? "object-contain"
-    : isPortrait
-    ? "object-cover"   // ảnh dọc
-    : "object-cover"; 
-
   return (
     <div
       {...handlers}
-      className="relative w-full h-full overflow-hidden cursor-pointer touch-pan-y select-none"
+      className="relative w-full overflow-hidden cursor-pointer touch-pan-y select-none bg-primary min-h-[300px]"
       onClick={handleClick}
       role="region"
       aria-roledescription="carousel"
       aria-label="Media slider"
+      style={
+        aspectRatio 
+          ? { aspectRatio: aspectRatio }
+          : { aspectRatio: "16/9" }
+      }
     >
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
@@ -122,7 +125,7 @@ const VideoImg: React.FC<VideoImgProps> = ({
             <img
               src={current.src}
               alt={`${alt} - ${index + 1}`}
-              className={`w-full h-full ${imageFitClass} bg-primary select-none pointer-events-none`}
+              className="w-full h-full object-contain select-none pointer-events-none"
               draggable={false}
             />
           )}

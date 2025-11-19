@@ -63,7 +63,7 @@ export function Section04() {
     <>
       <div className="grid grid-cols-3 grid-rows-1 gap-0 mt-10">
         <section className="mb-2 ml-2 mt-2">
-        <div className="flex justify-center items-center bg-black h-[627.65px]">
+        <div className="flex justify-center items-center bg-black">
           <VideoImg media={arrImgKat} clickToNext={true} onSlideChange={(index) => setCurrentSlideImgKat(index)}/>
         </div>
         <div className=" pb-5 flex justify-between">
@@ -77,7 +77,7 @@ export function Section04() {
           </div>
         </section>
         <section className="m-2">
-          <div className="flex justify-center items-center bg-black h-[456.17px]">
+          <div className="flex justify-center items-center bg-black">
             <VideoImg media={arrImgB} clickToNext={true} onSlideChange={(index) => setCurrentSlideImgB(index)}/>
           </div>
           <div className=" pb-5 flex justify-between">
@@ -91,7 +91,7 @@ export function Section04() {
           </div>
         </section>
         <section className="mb-2 mr-2 mt-2">
-          <div className="flex justify-center items-center bg-primary h-[922.19px]">
+          <div className="flex justify-center items-center bg-primary">
             <VideoImg media={arrImgLego} clickToNext={true} onSlideChange={(index) => setCurrentSlideImgLego(index)}/>
           </div>
           <div className=" pb-5 flex justify-between">

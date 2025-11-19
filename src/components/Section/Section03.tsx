@@ -67,7 +67,7 @@ export default function Section03() {
   <>
   <div className="grid grid-cols-2 grid-rows-1 gap-0 mt-10">
     <section className="m-2">
-      <div className="bg-black h-[942.73px] flex justify-center items-center" >
+      <div className="bg-black flex justify-center items-center" >
         {/* <img src="" alt="Test1" /> */}
         <VideoImg media={arrLt} clickToNext={true} onSlideChange={(index) => setCurrentSlideLT(index)} />
       </div>
@@ -86,7 +86,7 @@ export default function Section03() {
       </div>
     </section>
     <section className="ml-0 mb-2 mt-2 mr-2">
-      <div className="bg-black h-[747px] flex justify-center items-center" >
+      <div className="bg-black flex justify-center items-center" >
         <VideoImg media={arrC} clickToNext={true} onSlideChange={(index) => setCurrentSlideC(index)} />
       </div>
       <div className=" pb-5 flex justify-between">
