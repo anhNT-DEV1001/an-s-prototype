@@ -81,14 +81,14 @@ export default function Section02() {
         {/* text */}
         <div className=" pb-5 flex justify-between">
           <div className='font-display'>GACNHQ MV Credit</div>
-            <div className='text-right font-display text-[9px]'>
+            <div className='text-right font-display text-caption-sm'>
             {currentSlide + 1}/{arrMedia.length}
           </div>
         </div> 
-        <div className="text-[14.4px]">
+        <div className="text-body-md">
           Ending credit sequence for Giu Anh Cho Ngay Hom Qua, a music video from Xoay Tron, the second studio album by Hoang Dung.
         </div>
-        <div className="pt-2 text-[10.8px]">
+        <div className="pt-2 text-caption-md">
               <p>2025</p>
               <p>Creative & Art Direction: Duy Dao & Studio DUY</p>
               <p>Project Managers: Quan Le, Anh Nguyen</p>
@@ -103,14 +103,14 @@ export default function Section02() {
         </div>
         <div className=" pb-5 flex justify-between">
           <div className='font-display'>International Typography Poster Exhibition</div>
-            <div className='text-right font-display text-[9px]'>
+            <div className='text-right font-display text-caption-sm'>
             {currentSlideImg + 1}/{arrImg.length}
           </div>
         </div> 
-        <div className="text-[14.4px]">
+        <div className="text-body-md">
           Visual concept and poster for International Typography Poster Exhibition 2021, the event held annually celebrating innovative typographic expression from designers around the world.
         </div>
-        <div className="pt-2 text-[10.8px]">
+        <div className="pt-2 text-caption-md">
               <p>Poster: 841x1189mm, 210x297mm</p>
         </div>
       </section>
@@ -121,14 +121,14 @@ export default function Section02() {
         </div>
         <div className=" pb-5 flex justify-between">
           <div className='font-display'>ReCaptcha</div>
-            <div className='text-right font-display text-[9px]'>
+            <div className='text-right font-display text-caption-sm'>
             {currentSlideImgRC + 1}/{arrImgRC.length}
           </div>
         </div> 
-        <div className="text-[14.4px]">
+        <div className="text-body-md">
           A publication that examines the chaotic patterns within AI-generated data, using a visual language inspired by CAPTCHA, the online verification system created to differentiate humans from machines.
         </div>
-        <div className="pt-2 text-[10.8px]">
+        <div className="pt-2 text-caption-md">
               <p>2024</p>
               <p>Typeface: Redaction, Space Mono, Inter</p>
               <p>Dimension:</p>

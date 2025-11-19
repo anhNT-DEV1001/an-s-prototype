@@ -64,7 +64,6 @@ export default function Section03() {
   const [currentSlideLT, setCurrentSlideLT] = useState(0);
   const [currentSlideC, setCurrentSlideC] = useState(0);
   return(
-  <>
   <div className="grid grid-cols-2 grid-rows-1 gap-0 mt-10">
     <section className="m-2">
       <div className="bg-black flex justify-center items-center" >
@@ -73,15 +72,15 @@ export default function Section03() {
       </div>
       <div className=" pb-5 flex justify-between">
           <div className='font-display'>Lenti Type system </div>
-            <div className='text-right font-display text-[9px]'>
+            <div className='text-right font-display text-caption-sm'>
             {currentSlideLT + 1}/{arrLt.length}
             </div>
         </div> 
       <div className="grid grid-cols-2 grid-rows-1">
-        <div className="text-[14.4px] mr-2">A modular type system built from rectangular components, designed to emulate the shifting visual effect of lenticular printing. </div>
-        <div className="text-[14.4px]">The system is available in an all-caps alphabet and numerals, with a variable axis for flexible adjustments.</div>
+        <div className="text-body-md mr-2">A modular type system built from rectangular components, designed to emulate the shifting visual effect of lenticular printing. </div>
+        <div className="text-body-md">The system is available in an all-caps alphabet and numerals, with a variable axis for flexible adjustments.</div>
       </div>
-      <div className="text-[10.8px] pt-2">
+      <div className="text-caption-md pt-2">
         <p>2024, Typeface</p>
       </div>
     </section>
@@ -91,20 +90,19 @@ export default function Section03() {
       </div>
       <div className=" pb-5 flex justify-between">
           <div className='font-display'>The Creative High-wire </div>
-            <div className='text-right font-display text-[9px]'>
+            <div className='text-right font-display text-caption-sm'>
             {currentSlideC + 1}/{arrC.length}
             </div>
         </div> 
       <div className="grid grid-cols-2 grid-rows-1">
-        <div className="text-[14.4px] mr-2">Creating creative works feel like walking a high-wire between plagiarism and inspiration. This publication was built on my essay of exploring themes of plagiarism, inspiration, cliches, and originality within creative fields</div>
-        <div className="text-[14.4px]">The publication examines a series of projects and products that share similarities, wether in concept, design, or execution. From that, I draw my perspective on the issue, and a reminder to engage with inspiration behind the work with intergrity</div>
+        <div className="text-body-md mr-2">Creating creative works feel like walking a high-wire between plagiarism and inspiration. This publication was built on my essay of exploring themes of plagiarism, inspiration, cliches, and originality within creative fields</div>
+        <div className="text-body-md">The publication examines a series of projects and products that share similarities, wether in concept, design, or execution. From that, I draw my perspective on the issue, and a reminder to engage with inspiration behind the work with intergrity</div>
       </div>
-      <div className="text-[10.8px] pt-2">
+      <div className="text-caption-md pt-2">
         <p>2024</p>
         <p>Typeface: Lenti, AA Actual Mono</p>
       </div>
     </section>
   </div>
-  </>
   )
 }

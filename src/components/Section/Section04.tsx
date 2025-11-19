@@ -68,11 +68,11 @@ export function Section04() {
         </div>
         <div className=" pb-5 flex justify-between">
             <div className='font-display'>KAT</div>
-              <div className='text-right font-display text-[9px]'>
+              <div className='text-right font-display text-caption-sm'>
               {currentSlideImgKat + 1}/{arrImgKat.length}
             </div>
           </div> 
-          <div className="text-[14.4px]">
+          <div className="text-body-md">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam tempore eligendi, magni ad molestiae quaerat ipsam officia laudantium asperiores illum aperiam! Consequatur molestias ex incidunt labore fugit deleniti vel ea?
           </div>
         </section>
@@ -82,11 +82,11 @@ export function Section04() {
           </div>
           <div className=" pb-5 flex justify-between">
             <div className='font-display'>Beyond the Ashes</div>
-              <div className='text-right font-display text-[9px]'>
+              <div className='text-right font-display text-caption-sm'>
               {currentSlideImgB + 1}/{arrImgB.length}
             </div>
           </div> 
-          <div className="text-[14.4px]">
+          <div className="text-body-md">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam tempore eligendi, magni ad molestiae quaerat ipsam officia laudantium asperiores illum aperiam! Consequatur molestias ex incidunt labore fugit deleniti vel ea?
           </div>
         </section>
@@ -96,11 +96,11 @@ export function Section04() {
           </div>
           <div className=" pb-5 flex justify-between">
             <div className='font-display'>Lego Type Experiment</div>
-              <div className='text-right font-display text-[9px]'>
+              <div className='text-right font-display text-caption-sm'>
               {currentSlideImgLego + 1}/{arrImgLego.length}
             </div>
           </div> 
-          <div className="text-[14.4px]">
+          <div className="text-body-md">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam tempore eligendi, magni ad molestiae quaerat ipsam officia laudantium asperiores illum aperiam! Consequatur molestias ex incidunt labore fugit deleniti vel ea?
           </div>
         </section>

@@ -29,3 +29,47 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* 🎯 Zoom-Safe Properties - Giữ layout khi zoom */
+html, body {
+  /* Đảm bảo zoom không làm thay đổi layout */
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/* Đảm bảo VideoImg scale đúng khi zoom */
+[role="region"][aria-label="Media slider"] {
+  /* Giữ aspectRatio không thay đổi khi zoom */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Global variables for media gaps (percentage-based with clamp fallbacks)
+   - Keeps spacing proportional to container width, but bounded by min/max px
+   - Adjust `--media-gap` to tune spacing globally
+*/
+:root {
+  --media-gap: clamp(8px, 1%, 32px); /* min 8px, preferred 1% of container, max 32px */
+  --media-margin: clamp(6px, 0.6%, 20px);
+}
+
+/* Utility: keep certain grids using the media gap by default */
+.media-gap {
+  gap: var(--media-gap);
+}
+
+.media-margin {
+  margin: var(--media-margin);
+}
+
+/* Text sizing - dùng rem thay vì px để scale với font-size của root */
+/* Nếu user zoom, font-size root sẽ scale, tất cả rem cũng scale theo */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

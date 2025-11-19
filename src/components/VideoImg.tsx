@@ -36,6 +36,7 @@ const VideoImg: React.FC<VideoImgProps> = ({
 }) => {
   const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
   const [aspectRatio, setAspectRatio] = useState<number | null>(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   // Load ảnh và detect aspect ratio để tránh black bar
   useEffect(() => {
@@ -54,6 +55,31 @@ const VideoImg: React.FC<VideoImgProps> = ({
     };
     img.onerror = () => {
       setAspectRatio(null);
+    };
+  }, [index, media]);
+
+  // Re-calculate aspect ratio khi window resize (zoom)
+  useEffect(() => {
+    const handleResize = () => {
+      // Force re-render khi zoom/resize
+      const current = media[index];
+      if (current.type !== "video") {
+        const img = new Image();
+        img.src = current.src;
+        img.onload = () => {
+          const ratio = img.naturalWidth / img.naturalHeight;
+          setAspectRatio(ratio);
+        };
+      }
+    };
+
+    // Lắng nghe cả window resize và zoom events
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('zoom', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('zoom', handleResize);
     };
   }, [index, media]);
 
@@ -94,15 +120,16 @@ const VideoImg: React.FC<VideoImgProps> = ({
   return (
     <div
       {...handlers}
-      className="relative w-full overflow-hidden cursor-pointer touch-pan-y select-none bg-primary min-h-[300px]"
+      ref={containerRef}
+      className="relative w-full overflow-hidden cursor-pointer touch-pan-y select-none bg-primary"
       onClick={handleClick}
       role="region"
       aria-roledescription="carousel"
       aria-label="Media slider"
       style={
         aspectRatio 
-          ? { aspectRatio: aspectRatio }
-          : { aspectRatio: "16/9" }
+          ? { aspectRatio: aspectRatio, minHeight: "20rem" }
+          : { aspectRatio: "16/9", minHeight: "20rem" }
       }
     >
       <AnimatePresence initial={false} custom={direction}>

@@ -103,22 +103,22 @@ export default function Section01() {
         </div>
         <div className=" pb-5 flex justify-between">
           <div className='font-display'>Space, Boundary and Connection</div>
-            <div className='text-right font-display text-[9px]'>
+            <div className='text-right font-display text-caption-sm'>
             {currentSlideC + 1}/{arrC.length}
             </div>
         </div> 
         
         <div className="grid grid-cols-2 grid-rows-1 gap-0">
-          <div className="mr-2 text-[14.4px]">
-            Space, Boundary & Connection invites readers on a journey from the vast to the intimate. Each page guides reader from a sense of open expanse toward an enclosed interior. As pages turn, the scale tightens, prompting reflection on how distance and closeness shape perception.          
-            <div className="pt-2 text-[10.8px]">
+          <div className="mr-2 text-body-md">
+            Space, Boundary & Connection invites readers on a journey from the vast to the intimate. Each page guides reader from a sense of open expanse toward an enclosed interior. As pages turn, the scale tightens, prompting reflection on how distance and closeness shape perception.          
+            <div className="pt-2 text-caption-md">
               <p>2025</p>
               <p>Typeface: SM Hauser, GT Alpina</p>
             </div>
           </div>
-          <p className="text-[14.4px]">
+          <p className="text-body-md">
             The book is a spatial experiment: a grid zooms inward, titles contract, silver ink and margin‑blocking bars make boundaries tangible, while text and images flow across spreads to keep pages linked. Design together with <em>Dao Quang Minh, Le Thuc Nguyen, Vu Ngoc Minh.</em>          
-          <div className="pt-2 text-[10.8px]">
+          <div className="pt-2 text-caption-md">
             <p>Dimension:</p>
             <p>Number of pages: 358 pages</p>
           </div>
@@ -132,22 +132,22 @@ export default function Section01() {
         </div>
         <div className=" pb-5 flex justify-between">
           <div className='font-display'>Greenwich Student Book Exhibition</div>
-            <div className='text-right font-display text-[9px]'>
+            <div className='text-right font-display text-caption-sm'>
             {currentSlide + 1}/{arrMedia.length}
             </div>
         </div> 
         <div className="grid grid-cols-2 grid-rows-1 gap-0">
-          <p className="mr-2 text-[14.4px]">
-            Visual identity for the Greenwich Student Book Exhibition under the theme “O.” Each letter O is sourced directly from a featured book, reflecting its unique scale, typeface, and typographic character.
-            <div className="pt-2 text-[10.8px]">
+          <p className="mr-2 text-body-md">
+            Visual identity for the Greenwich Student Book Exhibition under the theme "O." Each letter O is sourced directly from a featured book, reflecting its unique scale, typeface, and typographic character.
+            <div className="pt-2 text-caption-md">
               <p>2025</p>
               <p>Visual Identity, various media</p>
               <p>Typeface: Maxi & Diatype by Dinamo</p>
             </div>
           </p>
-          <p className="text-[14.4px]">
+          <p className="text-body-md">
             Within this framework, we created a cohesive set of print and digital materials. These included large-format posters for public display, banners, catalogue, and animations. Animation by Dao Quang Minh, Vu Duy Anh
-            <div className="pt-2 text-[10.8px]">
+            <div className="pt-2 text-caption-md">
               <p>Poster: 1000x1982mm</p>
               <p>Banner: 1650x700mm, 2200x700mm, </p>
               <p>Catalogue: 215x306x10mm, 94 pages</p>
